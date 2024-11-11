@@ -1,0 +1,94 @@
+/* Основной фон и текст */
+body {
+    background-color: #F8F9FA; /* Светлый кремовый фон */
+    color: #343A40; /* Тёмный серый текст */
+    transition: background-color 0.5s, color 0.5s;
+    min-height: 100vh; /* Высота страницы */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Обертка для содержимого, чтобы футер всегда был внизу */
+  .container-fluid {
+    flex-grow: 1; /* Расширяет основной контент */
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #002855 !important; /* Глубокий тёмно-синий */
+  }
+  .dark-mode .navbar {
+      background-color: #001022 !important; /* Глубокий тёмно-синий */
+  }
+  
+  /* Светлый фон для боковой панели */
+  .bg-light {
+    background-color: #E9ECEF !important; /* Серо-голубой */
+  }
+  
+  .dark-mode .bg-light {
+    background-color: #212529 !important;
+  }
+  
+  
+  /* Стили для карточек */
+  .card {
+    background-color: #E9ECEF; /* Светлый серо-голубой фон */
+    color: #343A40; /* Тёмный серый текст */
+  }
+  
+  /* Основные кнопки */
+  .btn-primary {
+    background-color: #0056B3; /* Насыщенный синий */
+    border-color: #0056B3;
+    color: #FFF; /* Белый текст */
+  }
+  
+  /* Темный режим */
+  body.dark-mode {
+    background-color: #212529; /* Глубокий тёмный серый */
+    color: #EDEDED; /* Светлый текст */
+  }
+
+  /* Карточки и боковая панель в темном режиме */
+  .dark-mode .card, .dark-mode .sidebar{
+    background-color: #343A40; /* Темный серый для карточек и боковой панели */
+    color: #EDEDED; /* Светлый текст */
+  }
+  
+  .dark-mode .list-group-item {
+    background-color: #495057; /* Темный серо-синий для элементов списка в боковой панели */
+    color: #EDEDED; /* Светлый текст */
+  }
+  
+  
+  /* Светлый режим */
+  .sidebar h4 {
+    color: #000000; /* Цвет текста */
+    background-color: #ffffff; /* Фон для текста и отступов */
+    padding: 10px; /* Отступ */
+    border-radius: 5px; /* Если нужно сгладить углы */
+  }
+  
+  /* Темный режим */
+  .dark-mode .sidebar h4 {
+    color: #ffffff; /* Цвет текста */
+    background-color: #343A40; /* Фон для текста и отступов */
+    padding: 10px; /* Такой же отступ */
+    border-radius: 5px; /* Сохраните скругление, если нужно */
+  }
+  
+/* !!!!!!!! */
+  .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #2b4765; /* Цвет активного переключателя */
+}
+
+.custom-control-label {
+  color: #FFFAFB; /* Белый цвет для текста "Dark Mode" */
+}
+
+/* Добавляем отступы между карточками статей */
+#articles-container .card {
+  margin-bottom: 20px; /* 20px отступ снизу между карточками */
+}
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">News Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <!-- Toggle Dark Mode Switch ИЗМЕНЕНИЯ-->
+                <li class="nav-item">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="theme-toggle">
+                        <label class="custom-control-label" for="theme-toggle">Dark Mode</label>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-lg-3 col-md-4 col-sm-12 bg-light sidebar">
+                <h4>Categories</h4>
+                <ul id="category-filter" class="list-group">
+                    <li class="list-group-item" data-category="All">All</li>
+                    <li class="list-group-item" data-category="Health">Health</li>
+                    <li class="list-group-item" data-category="Technology">Technology</li>
+                    <li class="list-group-item" data-category="Arts">Arts</li>
+                    <li class="list-group-item" data-category="Finance">Finance</li>
+                    <li class="list-group-item" data-category="Environment">Environment</li>
+                    <li class="list-group-item" data-category="Travel">Travel</li>
+                    <li class="list-group-item" data-category="Automotive">Automotive</li>
+                    <li class="list-group-item" data-category="Society">Society</li>
+                </ul>
+            </nav>
+
+            <!-- Main content -->
+            <main class="col-lg-9 col-md-8 col-sm-12">
+                <div class="mb-3">
+                    <label for="sort-articles">Sort By:</label>
+                    <select id="sort-articles" class="form-control">
+                        <option value="views">Most Popular</option>
+                        <option value="date">Latest</option>
+                    </select>
+                </div>
+
+                <!-- Most Popular Article -->
+                <div id="most-popular" class="card mb-3">
+                    
+                </div>
+
+                <!-- Articles Container -->
+                <div id="articles-container" class="row">
+
+                </div>
+
+                <!-- Load More Button -->
+                <button id="load-more" class="btn btn-primary mt-3">Load More</button>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3 mt-3">
+        <p>&copy; 2024 News Dashboard</p>
+    </footer>
+
+    <!-- Modal for full article -->
+    <div class="modal fade" id="articleModal" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="articleModalLabel">Article Title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Full article content will go here...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
